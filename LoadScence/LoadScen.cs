@@ -12,7 +12,7 @@ public class SceneController : MonoBehaviour
         // Kiểm tra nếu người chơi nhấn phím F và đang ở gần Button
         if (isNearButton && Input.GetKeyDown(KeyCode.F))
         {
-            SavePlayerPosition(); // Lưu vị trí nhân vật
+            SavePosion.Instance.SavePlayerPosition(); // Lưu vị trí nhân vật
             LoadScene(); // Chuyển scene
         }
 
@@ -25,18 +25,18 @@ public class SceneController : MonoBehaviour
     }
 
     // Lưu vị trí của nhân vật vào PlayerPrefs
-    private void SavePlayerPosition()
-    {
-        GameObject player = GameObject.FindWithTag("Player"); // Tìm nhân vật
-        if (player != null)
-        {
-            Vector3 position = player.transform.position; // Lấy vị trí hiện tại
-            PlayerPrefs.SetFloat("PlayerPosX", position.x);
-            PlayerPrefs.SetFloat("PlayerPosY", position.y);
-            PlayerPrefs.SetFloat("PlayerPosZ", position.z);
-            PlayerPrefs.Save(); // Lưu dữ liệu
-        }
-    }
+    // private void SavePlayerPosition()
+    // {
+    //     GameObject player = GameObject.FindWithTag("Player"); // Tìm nhân vật
+    //     if (player != null)
+    //     {
+    //         Vector3 position = player.transform.position; // Lấy vị trí hiện tại
+    //         PlayerPrefs.SetFloat("PlayerPosX", position.x);
+    //         PlayerPrefs.SetFloat("PlayerPosY", position.y);
+    //         PlayerPrefs.SetFloat("PlayerPosZ", position.z);
+    //         PlayerPrefs.Save(); // Lưu dữ liệu
+    //     }
+    // }
 
     // Khi người chơi vào vùng Trigger
     private void OnTriggerEnter(Collider other)

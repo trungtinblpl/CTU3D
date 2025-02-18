@@ -3,6 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+using UnityEngine;
+using UnityEngine.UI;
+
+// public class Mission : MonoBehaviour
+// {
+//     public bool[] missions = new bool[10]; // Mảng lưu trạng thái nhiệm vụ
+//     public Text missionText;
+
+//     private string[] missionDescriptions = {
+//         "Let's go to the Can Tho University Administration Building. And talk to the Guide.",
+//         "Let's find out the Advanced Technology Building. And talk to the Guide.",
+//         "Now, find the Turtle Hall and talk to the Guide.",
+//         "Proceed to the C1 study house.",
+//         "Proceed to the School of Information and Communication Technology.",
+//         "Go to B1 study house.",
+//         "Visit the Faculty of Physical Education.",
+//         "Now, find the Faculty of Natural Sciences.",
+//         "Check out the School of Economics.",
+//         "Explore the Learning Resource Center (LRC)."
+//     };
+
+//     private void Update()
+//     {
+//         UpdateMissionText();
+//     }
+
+//     private void UpdateMissionText()
+//     {
+//         for (int i = 0; i < missions.Length; i++)
+//         {
+//             if (!missions[i])
+//             {
+//                 missionText.text = missionDescriptions[i];
+//                 return;
+//             }
+//         }
+//         missionText.text = "All missions completed successfully.";
+//     }
+// }
+
+
 public class Mission : MonoBehaviour
 {
     public bool Mission1 = false;

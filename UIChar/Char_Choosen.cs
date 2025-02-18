@@ -91,11 +91,14 @@ public class Char_Choosen : MonoBehaviour
         // Kiểm tra index để xác định cảnh cần tải
         if (index == 0) // Nếu index = 0 (nhân vật nam)
         {
+            PlayerPrefs.SetInt("SavedScene", 2);
             SceneManager.LoadSceneAsync("CTU"); // Chuyển đến cảnh CTU
         }
         else if (index == 1) // Nếu index = 1 (nhân vật nữ)
         {
+            PlayerPrefs.SetInt("SavedScene", 3);
             SceneManager.LoadSceneAsync("CTU 1"); // Chuyển đến cảnh CTU1
         }
+        PlayerPrefs.Save();
     }
 }
